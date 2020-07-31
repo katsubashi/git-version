@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CSS 
+    <link rel="stylesheet" href="css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.min.css">-->
+    <script type="text/javascript" src="./js/jquery-3.2.1.min.js">
+    </script> <script type="text/javascript" src="./js/jquery-migrate-3.0.0.min.js"></script>
+    <script type="text/javascript" src="./js/iziModal.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/iziModal.css" media="screen" />
+    <title>Document</title>
+
+</head>
+<body>
+  <button data-iziModal-open=".iziModal">クリックするとウィンドウが表示されます</button>
+  <div class="iziModal" data-izimodal-title="ヘッダー部分のタイトル (無くても動作します)" data-izimodal-subtitle="ヘッダータイトルの下部に表示される説明文(無くても動作します)">
+  <p>ここにコンテンツを記述していきます。</p>
+  <!-- / .iziModal --></div>
+</script>
+<script type="text/javascript">
+  $(function(){
+    $(".iziModal").iziModal();
+  })
+  </script>
+
+</body>
+</html>

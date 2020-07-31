@@ -1,0 +1,393 @@
+@charset "UTF-8";
+body{
+    line-height: 2;
+    font-family:"Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+}
+p{
+    word-wrap: break-word;
+}
+section{
+    padding: 70px 0;
+    h3{
+        font-size: 40px;
+        margin-bottom: 50px;
+        text-align: center;
+        font-family: 'Alegreya Sans SC', sans-serif;
+    }
+    h4{
+        margin: 30px 0;
+    }
+    img{
+        width: 100%;
+    }
+    .section_sub_title{
+        font-weight: bold;
+        font-size: 1.3em;
+    }
+}
+.logo{
+  padding: 20px;
+  text-align: center;
+  .logo-item{
+    width: 200px
+  }
+}
+.bg-light-gray{
+    background: #f3f3f3;
+}
+.container-fluid{
+    padding: 0;
+}
+.profile{
+    .row{
+        align-items: center;
+    }
+    img{
+        border: 2px solid #ddd;
+        border-radius: 50%;
+    }
+    .profile_img_wrap{
+        padding: 5%;
+    }
+    .profile_name{
+        font-weight: bold;
+        font-size: 1.3em;
+    }
+}
+.skills{
+    .skill1_item{
+        padding: 0px;
+        text-align: center;
+        .skill1_item_wrap{
+            padding: 15px 0;
+            margin:15px;
+            border-radius: 4px;
+            background: white;
+        }
+    }
+    .skill_name{
+        margin: 15px 0;
+        font-weight: bold;
+        font-size: 1.3em;
+    }
+    img{
+        width: 120px;
+        padding: 20px 0;
+    }
+}
+.works{
+    .works_item{
+        margin-bottom: 20px;
+        img{
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            box-shadow: 0 0 10px #bbb;
+        }
+    }
+    .works_item_site{
+      margin-bottom: 20px;
+      padding: 15px;
+    }
+}
+.works_item{
+    *{
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transition: all 0.35s ease;
+        transition: all 0.35s ease;
+    }
+    .works_item_wrap{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: auto;
+        height: 200px;
+        position: relative;
+        //overflow: hidden;
+        color: #000;
+        .works_item_txt{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            padding: 40px 10px;
+        }
+        h3.h3_item,.link{
+            width: 100%;
+            margin: 5px 0;
+            padding: 0;
+        }
+        h3.h3_item{
+            font-size: 1em;
+            font-weight: bold;
+            letter-spacing: 1px;
+            opacity: 0;
+            top: 50%;
+            -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+        }
+        p.txt_item{
+            font-size: 0.8em;
+            font-weight: bold;
+            letter-spacing: 1px;
+            opacity: 0;
+            top: 50%;
+            -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+        }
+        a{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            cursor: pointer;
+        }
+    }
+}
+.pswp__caption{
+    .pswp__caption__center{
+        max-width: 50%;
+    }
+    table{
+        margin: 20px auto;
+        text-align: left;
+        tr{
+            vertical-align: baseline;
+        }
+        th,td{
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+}
+
+.w-960{
+    width: 960px;
+    margin: auto;
+}
+/* モーダルCSSここから */
+.modalArea {
+    visibility: hidden; /* displayではなくvisibility */
+    opacity : 0;
+    position: fixed;
+    z-index: 10; /* サイトによってここの数値は調整 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: .4s;
+  }
+  .modalContents{
+      p{
+          img{
+              width: auto;
+              max-width: 500px;
+          }
+      }
+      
+  }
+  .modalBg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30,30,30,0.9);
+  }
+  
+  .modalWrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    width: 80%;
+    padding: 10px 30px;
+    background-color: #fff;
+  }
+  
+  .closeModal {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    cursor: pointer;
+  }
+  
+  .is-show { /* モーダル表示用クラス */
+    visibility: visible;
+    opacity : 1;
+  }
+  .contact{
+      input[type=text],textarea{
+          width: 300px;
+          border: none;
+      }
+      textarea{
+          height: 100px;
+      }
+      form{
+          p:nth-child(odd){
+              text-align: right;
+          }
+      }
+  }
+//ボタン
+  .push-btn{
+    width: 200px;
+    background: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+//
+#nav-toggle {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    height: 32px;
+    cursor: pointer;
+    
+  > div {
+    position: relative;
+    width: 36px;
+  }
+  span {
+    width: 100%;
+    height: 1px;
+    left: 0;
+    display: block;
+    background: #333;
+    position: absolute;
+    transition: transform .6s ease-in-out, top .5s ease;
+    
+    &:nth-child(1) {
+      top: 0;
+    }
+    &:nth-child(2) {
+      top: 14px;
+    }
+    &:nth-child(3) {
+      top: 28px;
+    }
+  }
+
+  &:hover span:nth-child(1) {
+    top: 4px;
+  }
+  &:hover span:nth-child(3) {
+    top: 23px;
+  }
+
+}
+
+.open {
+  #nav-toggle span {
+    background: #000;
+    
+    &:nth-child(1) {
+      top: 15px;
+      transform: rotate(45deg);
+    }
+    &:nth-child(2) {
+      top: 15px;
+      width: 0;
+      left: 50%;
+    }
+    &:nth-child(3) {
+      top: 15px;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+/* z-index */
+#nav-toggle {
+    z-index: 1000;
+}
+#container {
+    z-index: 900;
+}
+
+#gloval-nav {
+    background: #fff;
+    color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 990;
+    text-align: center;
+    display: flex;
+    visibility: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+    font-size: 29px;
+    opacity: 0;
+    transition: opacity .6s ease, visibility .6s ease;
+}
+
+
+#gloval-nav {
+  a {
+    display: block;
+    color: #000;
+    text-decoration: none;
+    padding: 10px 0;
+    transition: color .6s ease;
+    
+    &:hover {
+      color: #666;
+    }
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    
+    li {
+      opacity: 0;
+      transform: translateX(200px);
+      transition:  transform .6s ease, opacity .2s ease;
+
+      &:nth-child(2) {
+        transition-delay: .15s;
+      }
+      &:nth-child(3) {
+        transition-delay: .3s;
+      }
+      &:nth-child(4) {
+        transition-delay: .45s;
+      }
+      &:nth-child(5) {
+        transition-delay: .6s;
+      }
+      &:nth-child(6) {
+        transition-delay: .75s;
+      }
+      &:nth-child(7) {
+        transition-delay: .9s;
+      }
+    }
+  }
+} 
+
+/* open */
+.open {
+    overflow: hidden;
+  
+  #gloval-nav {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #gloval-nav li {
+    opacity: 1;
+    transform: translateX(0);
+    transition:  transform 1s ease, opacity .9s ease;
+  }
+}
